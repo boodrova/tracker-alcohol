@@ -1,0 +1,157 @@
+* {
+    font-family: "Gill Sans", sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+main {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    background-color: #fff;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 770px;
+    color:  #fff;
+    background-color: #EAA0A0;
+}
+#weekdays {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+#calendar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+    width: 100%;
+}
+.day, #weekdays div {
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+#weekdays div {
+    text-align: center;
+    font-weight: bold;
+}
+.day {
+    cursor: pointer;
+    text-align: right;
+    box-shadow: 0px 0px 3px #330000;
+    height: 100px;
+}
+.padding {
+    cursor: default !important;
+    background-color: #EAA0A0 !important;
+    box-shadow: none !important;
+}
+.day:hover {
+    background-color: #330000;
+}
+#currentDay {
+    color: #C3DA95;
+}
+#container #nav{
+    margin: 1.5em 1em 1em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0 1 5%;
+}
+#container #nav #info {
+    font-size: 25px;
+}
+#prev:before  {
+    content: "\f053";
+    font-family: FontAwesome;
+}
+#next:before {
+    content: "\f054";
+    font-family: FontAwesome;
+}
+a {
+    text-decoration: none;
+}
+#container a:link, a:visited {
+    color:  #fff;
+}
+#container a:focus, a:hover {
+    color:  #330000;
+}
+
+#summary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#soberDays{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 25%;
+}
+#soberDays span {
+    margin: 1em 1em 1em 1em;
+    align-self: center;
+    font-size: 25px;
+}
+#soberDays #quantity {
+    font-size: 30px;
+    align-self: center;
+}
+#cheer {
+    align-self: center;
+    margin: 1em 1.5em 1em 1.5em;
+    font-size: 20px;
+    font-style: italic;
+    flex: 0 0 75%;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60px;
+}
+.nameLogo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo:before {
+    align-self: center;
+    margin: 1em 0.5em 1em 0.5em;
+    content: "\f4e3";
+    font-family: FontAwesome;
+    font-size: 3em;
+}
+.logo:link, .logo:visited, .menu:link, .menu:visited {
+    color:  #330000;
+}
+.logo:focus, .logo:hover, .menu.focus, menu.hover {
+    color:  #fff;
+}
+.nameLogo span {
+    align-self: center;
+    font-size: 30px;
+}
+
+footer {
+    height: 5vh;
+}
+header, footer {
+    background-color: #994545;
+    color: #fff;
+}
+.selected {
+    background-color: #330000;
+}
